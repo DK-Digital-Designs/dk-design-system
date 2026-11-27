@@ -215,3 +215,39 @@ table {
     --line-strong: rgba(9, 13, 20, 0.2);
     --accent-soft: rgba(37, 99, 235, 0.1);
 }
+
+/* ---------- 4. Commerce ---------- */
+/* Let someone spend money. Light, product-forward, built for one thumb.
+   Distinct from Utility: that is a trained operator with a dense tool used all day.
+   This is a stranger, once, on a phone, on festival wifi, where every extra tap
+   costs money. Added Nov 2026 after the site audit — see docs/site-audit.md. */
+
+.t-commerce {
+    --base: #ffffff;
+    --surface: #ffffff;
+    --surface-2: #f5f6f8;
+    --ink: #14161a;
+    --muted: #5b6270;
+    --faint: #8b92a0;
+    --accent: #e04e1b;
+    --accent-ink: #ffffff;
+    --accent-soft: rgba(224, 78, 27, 0.1);
+    --ok: #0e7a4d;
+    --warn: #b4690e;
+    --err: #d12e2e;
+    --line: rgba(20, 22, 26, 0.1);
+    --line-strong: rgba(20, 22, 26, 0.2);
+
+    /* No fifth font family. Prices want clarity and tabular figures, not personality. */
+    --font-display: "Inter Tight", "Inter", sans-serif;
+    --font-body: "Inter", system-ui, sans-serif;
+    --font-mono: "JetBrains Mono", ui-monospace, monospace;
+    --text-base: 1rem;
+
+    --radius: 12px;
+    --radius-sm: 8px;
+    --bar: 68px;
+    --container: 1080px;
+    --ease: cubic-bezier(0.4, 0, 0.2, 1);
+    --speed: 180ms;
+}

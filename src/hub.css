@@ -170,9 +170,15 @@ body {
     gap: 1rem;
 }
 
-@media (min-width: 900px) {
+@media (min-width: 760px) {
     .styles {
-        grid-template-columns: repeat(3, 1fr);
+        grid-template-columns: repeat(2, 1fr);
+    }
+}
+
+@media (min-width: 1040px) {
+    .styles {
+        grid-template-columns: repeat(4, 1fr);
     }
 }
 

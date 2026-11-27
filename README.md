@@ -1,6 +1,6 @@
 # DK Digital — design system
 
-The playbook for every new DK Digital website: three house styles, the mobile-first and SEO
+The playbook for every new DK Digital website: four house styles, the mobile-first and SEO
 rules that apply to all of them, a reuse-first library list, and a showcase site that
 demonstrates the lot.
 
@@ -24,15 +24,18 @@ npm install; npm run dev
 
 | Path | What it is |
 |---|---|
-| `index.html` | The hub. The three styles, the reuse ladder, the non-negotiables. |
+| `index.html` | The hub. The four styles, the reuse ladder, the non-negotiables. |
 | `styles/brochure.html` | **Brochure** demo — expressive, dark, motion-led. Fictional cycling studio. |
 | `styles/confident.html` | **Confident** demo — light, restrained, typographic. Fictional accountancy firm. Also the **SEO reference**: view source for the meta tags and JSON-LD. |
 | `styles/utility.html` | **Utility** demo — dense, functional, light + dark. Fictional payments portal. |
-| `src/tokens.css` | **The source of truth.** Reset plus all three token sets as `.t-*` classes. |
-| `src/brochure.css`, `src/confident.css`, `src/utility.css` | Each style's components. |
+| `styles/commerce.html` | **Commerce** demo — light, product-forward, one thumb. Fictional venue ordering flow. |
+| `src/tokens.css` | **The source of truth.** Reset plus all four token sets as `.t-*` classes. |
+| `src/brochure.css`, `src/confident.css`, `src/utility.css`, `src/commerce.css` | Each style's components. |
 | `src/reveal.js` | Scroll reveal and count-up on `IntersectionObserver`. No animation library. |
+| `src/cart.js` | Quantity controls and running total for the Commerce demo. Plain DOM, no state library. |
 | `docs/house-style.md` | Full spec: every token, mobile-first rules, readability rules, the explicit don'ts. |
 | `docs/seo.md` | SEO checklist: ship blockers, Core Web Vitals, structured data, local search, launch day. |
+| `docs/site-audit.md` | Every DK Digital project mapped onto the styles, and the gap that produced Commerce. |
 | `docs/ui-libraries.md` | Library research list and inspiration galleries. Verified Nov 2026. |
 | `.claude/skills/dk-style/` | Claude Code skill that applies all of the above automatically. |
 
@@ -41,10 +44,11 @@ The demo clients are fictional. The tokens are real — copy them.
 ## Using this on a new project
 
 1. Pick a style. Buyer making an emotional decision → **Brochure**. Cautious decision →
-   **Confident**. Already decided, now has work to do → **Utility**. A site with a logged-in
-   area uses two: a marketing style out front, Utility behind the login.
+   **Confident**. Already decided, now has work to do → **Utility**. About to hand over money →
+   **Commerce**. A site with a logged-in or paying area uses two on purpose: a marketing style
+   out front, Utility or Commerce behind the login.
 2. Copy `src/tokens.css` into the new project.
-3. Put the class on `<body>`: `t-brochure`, `t-confident` or `t-utility`.
+3. Put the class on `<body>`: `t-brochure`, `t-confident`, `t-utility` or `t-commerce`.
 4. Open the matching demo page and copy the patterns you need. Don't start from blank.
 5. Build everything from `var(--…)`. No hardcoded hex in a component.
 

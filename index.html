@@ -6,7 +6,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1" />
     <title>DK Digital — house style</title>
     <meta name="description"
-        content="DK Digital's design system: three house styles, a reuse-first library list, and live demo pages for each style." />
+        content="DK Digital's design system: four house styles, a reuse-first library list, and live demo pages for each style." />
     <meta name="theme-color" content="#0b0d10" />
     <link rel="preconnect" href="https://fonts.googleapis.com" />
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
@@ -21,12 +21,12 @@
     <header class="masthead">
         <div class="wrap masthead__in">
             <p class="kicker">DK Digital &middot; design system</p>
-            <h1>Three styles. Pick one, commit to it, stop designing from scratch.</h1>
+            <h1>Four styles. Pick one, commit to it, stop designing from scratch.</h1>
             <p>Every new DK Digital site starts here. Three house styles with real tokens and a working demo page
                 each, plus a list of libraries worth reusing so we stop hand-building toasts, drawers and date
                 pickers at eleven at night.</p>
             <div class="masthead__links">
-                <a class="btn btn--primary" href="#styles">See the three styles</a>
+                <a class="btn btn--primary" href="#styles">See the four styles</a>
                 <a class="btn btn--quiet" href="seo.md">SEO checklist</a>
                 <a class="btn btn--quiet" href="ui-libraries.md">Library list</a>
                 <a class="btn btn--quiet" href="house-style.md">Full spec</a>
@@ -37,7 +37,7 @@
     <main>
         <section class="section wrap" id="styles">
             <div class="section__head">
-                <h2>The three styles</h2>
+                <h2>The four styles</h2>
                 <p>Each demo is a fictional client built from the real tokens.</p>
             </div>
 
@@ -133,7 +133,7 @@
                         <dl class="style__meta">
                             <div>
                                 <dt>Use for</dt>
-                                <dd>Dashboards, client portals, payment and booking screens</dd>
+                                <dd>Dashboards, admin, operator tools opened daily</dd>
                             </div>
                             <div>
                                 <dt>Type</dt>
@@ -149,13 +149,53 @@
                         <a class="btn btn--quiet" href="styles/utility.html">Open the demo &rarr;</a>
                     </div>
                 </article>
+
+                <article class="style">
+                    <div class="style__preview t-commerce">
+                        <h3>Double Smash Burger</h3>
+                        <p class="style__sub">R 95.00 &middot; add to order</p>
+                        <div class="style__swatches" aria-hidden="true">
+                            <span style="background:#ffffff"></span>
+                            <span style="background:#f5f6f8"></span>
+                            <span style="background:#e04e1b"></span>
+                            <span style="background:#0e7a4d"></span>
+                            <span style="background:#14161a"></span>
+                        </div>
+                    </div>
+                    <div class="style__body">
+                        <p class="style__job">Let someone spend money.</p>
+                        <p>White page, one unmissable orange action, tabular prices, and a cart bar fixed in
+                            thumb reach. Added after the site audit.</p>
+                        <dl class="style__meta">
+                            <div>
+                                <dt>Use for</dt>
+                                <dd>Storefronts, menus, carts, checkout, order tracking</dd>
+                            </div>
+                            <div>
+                                <dt>Type</dt>
+                                <dd>Inter Tight + Inter, 16px</dd>
+                            </div>
+                            <div>
+                                <dt>Motion</dt>
+                                <dd>Only to confirm a tap</dd>
+                            </div>
+                        </dl>
+                    </div>
+                    <div class="style__foot">
+                        <a class="btn btn--quiet" href="styles/commerce.html">Open the demo &rarr;</a>
+                    </div>
+                </article>
             </div>
+            <p class="rules__test"><strong>Utility and Commerce are the pair that get confused.</strong> Utility
+                is a trained operator with a dense tool they open forty times a day. Commerce is a stranger,
+                once, on a phone, on bad signal, where every extra tap costs money. SKIIP needs both at the same
+                time &mdash; see the <a href="site-audit.md">site audit</a>.</p>
         </section>
 
         <section class="section wrap">
             <div class="section__head">
                 <h2>Three rules that come before the style</h2>
-                <p>These apply to all three, on every client site.</p>
+                <p>These apply to all four, on every client site.</p>
             </div>
             <div class="rules">
                 <article class="rule">
@@ -259,6 +299,11 @@ cp dk-design-system/src/tokens.css new-project/src/
                 <h2>Reference</h2>
             </div>
             <div class="docs">
+                <a class="doc" href="site-audit.md">
+                    <h3>Site audit <code>docs/site-audit.md</code></h3>
+                    <p>Every DK Digital project mapped onto the styles, what two of them should be restyled to,
+                        and why SKIIP forced a fourth style. November 2026.</p>
+                </a>
                 <a class="doc" href="seo.md">
                     <h3>SEO checklist <code>docs/seo.md</code></h3>
                     <p>Ship blockers, Core Web Vitals targets, structured data, local search, and the launch
@@ -289,7 +334,7 @@ cp dk-design-system/src/tokens.css new-project/src/
 
         <section class="section wrap">
             <div class="section__head">
-                <h2>Non-negotiable in all three styles</h2>
+                <h2>Non-negotiable in all four styles</h2>
                 <p>Not style choices. These don't get traded away for a deadline.</p>
             </div>
             <ul class="checks">

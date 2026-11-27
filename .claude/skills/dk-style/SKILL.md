@@ -20,7 +20,7 @@ too. Build at 360px first and let the layout grow outwards; do not design at des
 squeeze it down afterwards.
 
 - Tap targets **44×44px** minimum on touch, 8px apart. Dense desktop controls get bumped under
-  `@media (pointer: coarse)` — all three styles already do this, copy the pattern.
+  `@media (pointer: coarse)` — all four styles already do this, copy the pattern.
 - Form inputs **16px minimum**, or iOS Safari zooms the page on focus.
 - Correct `type`, `inputmode` and `autocomplete` on every field.
 - Phone numbers are `tel:` links, addresses link to maps.
@@ -30,26 +30,32 @@ squeeze it down afterwards.
 
 ## Step 1 — pick a style, then say which one you picked
 
-Three styles. One per project. Never mix them.
+Four styles. One per project. Never mix them.
 
 | Style | Job | Use for |
 |---|---|---|
 | **Brochure** | Make someone *want* it | Fitness, events, launches, hospitality, consumer brands, portfolios |
 | **Confident** | Make someone *trust* it | Advisory, legal, finance, medical, B2B, premium trades |
-| **Utility** | Let someone *do* something | Dashboards, client portals, payment and booking screens, anything behind a login |
+| **Utility** | Let someone *do* something | Dashboards, admin, operator tools, anything a trained user opens daily |
+| **Commerce** | Let someone *spend money* | Storefronts, menus, carts, checkout, booking, order tracking |
 
 Decide from the buyer, not the brief's adjectives: emotional decision → Brochure; cautious
-decision → Confident; already decided and now has work to do → Utility. A marketing site with
-a logged-in area uses two styles on purpose — Brochure or Confident for the public pages,
-Utility behind the login.
+decision → Confident; already decided and now has work to do → Utility; about to hand over
+money → Commerce.
 
-If the project genuinely doesn't fit, say so and ask. Don't invent a fourth style.
+**Utility and Commerce are the pair that get confused.** Utility is a trained operator with a
+dense tool they open forty times a day. Commerce is a stranger, once, on a phone, on bad
+signal, where every extra tap costs money. A project can need both — SKIIP's vendor dashboard
+is Utility and its attendee ordering flow is Commerce. A marketing site with a logged-in area
+likewise uses two on purpose: two deliberately, never four accidentally.
+
+If the project genuinely doesn't fit, say so and ask. Don't invent a fifth style.
 
 ## Step 2 — use the tokens, don't invent colours
 
 Copy `src/tokens.css` from the `dk-design-system` repo, put the style's class on `<body>`
-(`t-brochure`, `t-confident`, `t-utility`), and build everything from `var(--…)`. Never
-hardcode a hex in a component.
+(`t-brochure`, `t-confident`, `t-utility`, `t-commerce`), and build everything from
+`var(--…)`. Never hardcode a hex in a component.
 
 Headline numbers, if you need them before reading the file:
 
@@ -57,6 +63,10 @@ Headline numbers, if you need them before reading the file:
   Grotesque + Inter, hero `clamp(3rem, 9vw, 7.5rem)` at `-0.045em`, sections `clamp(6rem, 14vw, 12rem)`.
 - **Confident** — `#fbfaf8` base, accent `#1e4a3a`, radius `6px`, Inter Tight + Inter, hero
   `clamp(2.25rem, 4.5vw, 3.75rem)`, body capped at `62ch`, transitions `160ms`.
+- **Commerce** — `#ffffff` base, accent `#e04e1b`, radius `12px`, Inter Tight + Inter at a
+  **16px** base, tabular figures on every price, 68px sticky cart bar in thumb reach. Price is
+  the second thing read after the product name. Full total including fees shown before
+  checkout, never after. Trust signals beside the pay button.
 - **Utility** — light + dark, accent `#2563eb`, radius `8px`, Inter at a **14px** base +
   JetBrains Mono for figures, 4px grid, 40px rows, 240px sidebar, transitions `120ms`.
 
@@ -156,7 +166,15 @@ These are the tells. Don't ship them.
 - Marketing-sized headings inside a dashboard.
 - Big soft drop shadows in the Confident style — it uses 1px hairlines only.
 
-## Non-negotiables in all three styles
+And in Commerce specifically, these cost real money rather than just looking generic:
+
+- A cart hidden behind an icon in the top corner instead of a bottom bar in thumb reach.
+- Fees that only appear on the last screen. Show the full total before checkout.
+- Forced account creation before paying.
+- Carousels of products — people don't swipe them, they scroll past.
+- Countdown timers and fake scarcity. Our clients have to see these customers again.
+
+## Non-negotiables in all four styles
 
 Not style choices; these don't get traded away for a deadline.
 

@@ -1,6 +1,8 @@
 # DK Digital house style
 
-Three styles. Every new site picks one and commits to it. Mixing them is how sites end up looking like a template with the serial number filed off.
+Four styles. Every new site picks one and commits to it. Mixing them is how sites end up looking like a template with the serial number filed off.
+
+The exception is a project with both a public face and a logged-in area — SKIIP and Veloire are both like this. Those use two on purpose: a marketing style out front, Utility or Commerce behind the login. Two deliberately, never four accidentally.
 
 The showcase site (`index.html` plus `styles/*.html`) is the live version of this document — read that first, then come back here for the numbers.
 
@@ -8,16 +10,18 @@ The showcase site (`index.html` plus `styles/*.html`) is the live version of thi
 
 ## Pick a style
 
-| | **Brochure** | **Confident** | **Utility** |
-|---|---|---|---|
-| Job | Make someone *want* it | Make someone *trust* it | Let someone *do* something |
-| Feel | Expressive, cinematic, dark | Quiet, typographic, light | Dense, functional, neutral |
-| Use for | Fitness, events, launches, hospitality, consumer brands, portfolios | Advisory, legal, finance, medical, B2B, trades with a premium position | Dashboards, client portals, payment and booking screens, admin, anything behind a login |
-| Motion | Central to the design | Barely present | Only as state feedback |
-| Reference | Apple product pages, Awwwards | Stripe, Vercel, Basecamp | Linear, Stripe Dashboard, Supabase |
-| Risk if wrong | Looks unserious for a law firm | Looks cheap for a nightclub | Looks like a spreadsheet on a marketing site |
+| | **Brochure** | **Confident** | **Utility** | **Commerce** |
+|---|---|---|---|---|
+| Job | Make someone *want* it | Make someone *trust* it | Let someone *do* something | Let someone *spend money* |
+| Feel | Expressive, cinematic, dark | Quiet, typographic, light | Dense, functional, neutral | Light, product-forward, one thumb |
+| Use for | Fitness, events, launches, hospitality, consumer brands, portfolios | Advisory, legal, finance, medical, B2B, trades with a premium position | Dashboards, admin, operator tools, anything a trained user opens daily | Storefronts, menus, carts, checkout, booking, order tracking |
+| Motion | Central to the design | Barely present | Only as state feedback | Only to confirm a tap landed |
+| Reference | Apple product pages, Awwwards | Stripe, Vercel, Basecamp | Linear, Stripe Dashboard, Supabase | Uber Eats, Shopify checkout, Deliveroo |
+| Risk if wrong | Looks unserious for a law firm | Looks cheap for a nightclub | Looks like a spreadsheet on a marketing site | A dashboard where a stranger needed a buy button |
 
-If the client's buyers are making an emotional decision, Brochure. If they're making a cautious one, Confident. If they've already decided and now have work to do, Utility.
+Decide from the buyer, not the brief's adjectives. Emotional decision → Brochure. Cautious decision → Confident. Already decided, now has work to do → Utility. About to hand over money → Commerce.
+
+**Utility and Commerce are the pair people confuse.** Utility is a trained operator with a dense tool they open forty times a day. Commerce is a stranger, once, on a phone, on bad signal, where every extra tap costs money. SKIIP needs both at the same time: its vendor dashboard is Utility, its attendee ordering flow is Commerce.
 
 ---
 
@@ -89,6 +93,37 @@ Neutral, dense, functional. Built to be read at a glance and used all day. Suppo
 - **Colour** — neutral everywhere, accent reserved for the primary action and active nav state. Semantic colours only for genuine status, never decoration. Never use colour as the *only* signal — pair it with a label or icon.
 - **Motion** — `120ms` maximum, and only to confirm something happened. No entrance animations; people open this screen forty times a day.
 - **Don't** — marketing-sized headings, hero sections, 16px body type, decorative illustration, more than one primary button per view.
+
+## Commerce
+
+Light, product-forward, built for one thumb. Added November 2026 after the site audit found SKIIP had no style that fitted — see `site-audit.md`.
+
+```css
+--base:       #FFFFFF;
+--surface:    #FFFFFF;
+--surface-2:  #F5F6F8;
+--ink:        #14161A;
+--muted:      #5B6270;
+--faint:      #8B92A0;
+--accent:     #E04E1B;
+--ok:         #0E7A4D;
+--err:        #D12E2E;
+--line:       rgba(20, 22, 26, 0.10);
+--radius:     12px;
+--bar:        68px;
+--speed:      180ms;
+```
+
+- **Type** — `Inter Tight` 600 for product names, prices and buttons, `Inter` for body, at a **16px** base. No display face: prices want clarity, not personality. Everything numeric gets `font-variant-numeric: tabular-nums`.
+- **Colour** — white page, warm orange accent for the one action that matters. Orange rather than another green or blue so it can never be mistaken for Confident or Utility, and so the pay button is unmissable on a sunlit phone screen.
+- **Price is the second thing read**, after the product name. Never bury it, never put it below the fold of a card, never render it in muted grey.
+- **Thumb reach is the layout rule.** The cart bar is fixed to the bottom and slides up the moment the basket isn't empty. Reserve its height on `body` so it never covers the last product.
+- **44px on everything, no exceptions** — the quantity control is the single most mis-tapped element in any ordering app.
+- **Say the total early and completely.** Service fees and delivery appear before checkout, not after. A total that changes on the last screen is the main reason carts get abandoned.
+- **Trust signals next to the pay button**, not in the footer. A stranger is about to type a card number.
+- **Design the states**: sold out, empty cart, failed payment, order in progress. On a real storefront these are seen more often than the happy path.
+- **Assume bad signal.** Skeletons rather than spinners, optimistic quantity updates, and never block the whole screen on a request.
+- **Don't** — carousels of products, a cart that lives only behind an icon in the top corner, surprise fees at checkout, forced account creation before paying, countdown timers and fake scarcity.
 
 ---
 
@@ -170,7 +205,7 @@ The test: hand the phone to someone who has never seen the site and say nothing.
 
 ---
 
-## Non-negotiables, all three styles
+## Non-negotiables, all four styles
 
 These aren't style choices and they don't get traded away for a deadline.
 
