@@ -1,0 +1,364 @@
+<!doctype html>
+<html lang="en">
+
+<head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <title>DK Digital — house style</title>
+    <meta name="description"
+        content="DK Digital's design system: four house styles, a reuse-first library list, and live demo pages for each style." />
+    <meta name="theme-color" content="#0b0d10" />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+        href="https://fonts.googleapis.com/css2?family=Bricolage+Grotesque:opsz,wght@12..96,600;12..96,700&family=Inter+Tight:wght@500;600&family=Inter:wght@400;500;600&family=JetBrains+Mono:wght@400;500&display=swap"
+        rel="stylesheet" />
+  <link rel="stylesheet" crossorigin href="./assets/main-CHEvLPxF.css">
+  <link rel="stylesheet" crossorigin href="./assets/tokens-CNJ62J6D.css">
+</head>
+
+<body class="t-utility">
+    <header class="masthead">
+        <div class="wrap masthead__in">
+            <p class="kicker">DK Digital &middot; design system</p>
+            <h1>Four styles. Pick one, commit to it, stop designing from scratch.</h1>
+            <p>Every new DK Digital site starts here. Three house styles with real tokens and a working demo page
+                each, plus a list of libraries worth reusing so we stop hand-building toasts, drawers and date
+                pickers at eleven at night.</p>
+            <div class="masthead__links">
+                <a class="btn btn--primary" href="#styles">See the four styles</a>
+                <a class="btn btn--quiet" href="seo.md">SEO checklist</a>
+                <a class="btn btn--quiet" href="ui-libraries.md">Library list</a>
+                <a class="btn btn--quiet" href="house-style.md">Full spec</a>
+            </div>
+        </div>
+    </header>
+
+    <main>
+        <section class="section wrap" id="styles">
+            <div class="section__head">
+                <h2>The four styles</h2>
+                <p>Each demo is a fictional client built from the real tokens.</p>
+            </div>
+
+            <div class="styles">
+                <article class="style">
+                    <div class="style__preview t-brochure">
+                        <h3>Forty-five minutes.</h3>
+                        <p class="style__sub">Dark, expressive, motion-led</p>
+                        <div class="style__swatches" aria-hidden="true">
+                            <span style="background:#09090b"></span>
+                            <span style="background:#1a1a20"></span>
+                            <span style="background:#7c5cff"></span>
+                            <span style="background:#22d3ee"></span>
+                            <span style="background:#f4f4f5"></span>
+                        </div>
+                    </div>
+                    <div class="style__body">
+                        <p class="style__job">Make someone want it.</p>
+                        <p>Oversized type, one accent gradient used sparingly, scroll reveals and animated numbers.
+                            The style that sells.</p>
+                        <dl class="style__meta">
+                            <div>
+                                <dt>Use for</dt>
+                                <dd>Fitness, events, launches, hospitality, portfolios</dd>
+                            </div>
+                            <div>
+                                <dt>Type</dt>
+                                <dd>Bricolage Grotesque + Inter</dd>
+                            </div>
+                            <div>
+                                <dt>Motion</dt>
+                                <dd>Central to the design</dd>
+                            </div>
+                        </dl>
+                    </div>
+                    <div class="style__foot">
+                        <a class="btn btn--quiet" href="styles/brochure.html">Open the demo &rarr;</a>
+                    </div>
+                </article>
+
+                <article class="style">
+                    <div class="style__preview t-confident">
+                        <h3>Handled properly.</h3>
+                        <p class="style__sub">Light, restrained, typographic</p>
+                        <div class="style__swatches" aria-hidden="true">
+                            <span style="background:#fbfaf8"></span>
+                            <span style="background:#f3f1ec"></span>
+                            <span style="background:#1e4a3a"></span>
+                            <span style="background:#5c5f66"></span>
+                            <span style="background:#15161a"></span>
+                        </div>
+                    </div>
+                    <div class="style__body">
+                        <p class="style__job">Make someone trust it.</p>
+                        <p>Warm off-white, hairline rules, a 62ch measure and almost no motion. The design is the
+                            grid and the type.</p>
+                        <dl class="style__meta">
+                            <div>
+                                <dt>Use for</dt>
+                                <dd>Advisory, legal, finance, medical, premium trades</dd>
+                            </div>
+                            <div>
+                                <dt>Type</dt>
+                                <dd>Inter Tight + Inter</dd>
+                            </div>
+                            <div>
+                                <dt>Motion</dt>
+                                <dd>Barely present</dd>
+                            </div>
+                        </dl>
+                    </div>
+                    <div class="style__foot">
+                        <a class="btn btn--quiet" href="styles/confident.html">Open the demo &rarr;</a>
+                    </div>
+                </article>
+
+                <article class="style">
+                    <div class="style__preview t-utility">
+                        <h3>Invoices</h3>
+                        <p class="style__sub">R 184 920 outstanding</p>
+                        <div class="style__swatches" aria-hidden="true">
+                            <span style="background:#0b0d10"></span>
+                            <span style="background:#1a1e25"></span>
+                            <span style="background:#2563eb"></span>
+                            <span style="background:#16a34a"></span>
+                            <span style="background:#e7eaef"></span>
+                        </div>
+                    </div>
+                    <div class="style__body">
+                        <p class="style__job">Let someone do something.</p>
+                        <p>14px base, 4px grid, 40px rows, mono figures, light and dark. Built to be used all day,
+                            not admired once.</p>
+                        <dl class="style__meta">
+                            <div>
+                                <dt>Use for</dt>
+                                <dd>Dashboards, admin, operator tools opened daily</dd>
+                            </div>
+                            <div>
+                                <dt>Type</dt>
+                                <dd>Inter + JetBrains Mono</dd>
+                            </div>
+                            <div>
+                                <dt>Motion</dt>
+                                <dd>State feedback only</dd>
+                            </div>
+                        </dl>
+                    </div>
+                    <div class="style__foot">
+                        <a class="btn btn--quiet" href="styles/utility.html">Open the demo &rarr;</a>
+                    </div>
+                </article>
+
+                <article class="style">
+                    <div class="style__preview t-commerce">
+                        <h3>Double Smash Burger</h3>
+                        <p class="style__sub">R 95.00 &middot; add to order</p>
+                        <div class="style__swatches" aria-hidden="true">
+                            <span style="background:#ffffff"></span>
+                            <span style="background:#f5f6f8"></span>
+                            <span style="background:#e04e1b"></span>
+                            <span style="background:#0e7a4d"></span>
+                            <span style="background:#14161a"></span>
+                        </div>
+                    </div>
+                    <div class="style__body">
+                        <p class="style__job">Let someone spend money.</p>
+                        <p>White page, one unmissable orange action, tabular prices, and a cart bar fixed in
+                            thumb reach. Added after the site audit.</p>
+                        <dl class="style__meta">
+                            <div>
+                                <dt>Use for</dt>
+                                <dd>Storefronts, menus, carts, checkout, order tracking</dd>
+                            </div>
+                            <div>
+                                <dt>Type</dt>
+                                <dd>Inter Tight + Inter, 16px</dd>
+                            </div>
+                            <div>
+                                <dt>Motion</dt>
+                                <dd>Only to confirm a tap</dd>
+                            </div>
+                        </dl>
+                    </div>
+                    <div class="style__foot">
+                        <a class="btn btn--quiet" href="styles/commerce.html">Open the demo &rarr;</a>
+                    </div>
+                </article>
+            </div>
+            <p class="rules__test"><strong>Utility and Commerce are the pair that get confused.</strong> Utility
+                is a trained operator with a dense tool they open forty times a day. Commerce is a stranger,
+                once, on a phone, on bad signal, where every extra tap costs money. SKIIP needs both at the same
+                time &mdash; see the <a href="site-audit.md">site audit</a>.</p>
+        </section>
+
+        <section class="section wrap">
+            <div class="section__head">
+                <h2>Three rules that come before the style</h2>
+                <p>These apply to all four, on every client site.</p>
+            </div>
+            <div class="rules">
+                <article class="rule">
+                    <p class="rule__n">Phones first</p>
+                    <p class="rule__big">99%</p>
+                    <p>of our clients' visitors arrive on a phone. Build at 360px and let the layout grow
+                        outwards &mdash; never design at desktop width and squeeze it down.</p>
+                    <ul>
+                        <li>44&times;44px tap targets on touch, 8px apart</li>
+                        <li>16px minimum on form inputs, or iOS zooms the page</li>
+                        <li>Nothing hover-only; <code>tel:</code> links on every phone number</li>
+                        <li>No horizontal scroll at 360px &mdash; verify it, don't assume it</li>
+                    </ul>
+                </article>
+
+                <article class="rule">
+                    <p class="rule__n">SEO, as you build</p>
+                    <p class="rule__big">Local</p>
+                    <p>search is the whole game for a small business. SEO is not a phase at the end &mdash;
+                        most of it is decided by how the page is built.</p>
+                    <ul>
+                        <li>Unique title, description and canonical on every page</li>
+                        <li><code>LocalBusiness</code> + <code>FAQPage</code> structured data</li>
+                        <li>LCP under 2.5s, CLS under 0.1 on a mid-range phone</li>
+                        <li>Footer NAP matching Google Business Profile exactly</li>
+                    </ul>
+                    <p class="rule__link"><a href="seo.md">Full SEO checklist &rarr;</a></p>
+                </article>
+
+                <article class="rule">
+                    <p class="rule__n">Readable and obvious</p>
+                    <p class="rule__big">65ch</p>
+                    <p>measure, 16px body text, one primary action per screen. Clean and intuitive beats
+                        clever every time.</p>
+                    <ul>
+                        <li>Line height 1.5&ndash;1.65, left-aligned, short paragraphs</li>
+                        <li>Plain language &mdash; no "leverage", "bespoke", "seamless"</li>
+                        <li>Say what happens next, not "Submit"</li>
+                        <li>Fewer choices. Cutting the nav is usually the biggest win</li>
+                    </ul>
+                </article>
+            </div>
+            <p class="rules__test">The test: hand the phone to someone who has never seen the site and say
+                nothing. If they ask &ldquo;what do I press?&rdquo;, the page has failed.</p>
+        </section>
+
+        <section class="section wrap">
+            <div class="section__head">
+                <h2>Before you build anything</h2>
+                <p>Stop at the first rung that works.</p>
+            </div>
+            <ol class="ladder">
+                <li>
+                    <span class="ladder__n">01</span>
+                    <span class="ladder__q">Does it need to exist?</span>
+                    <span class="ladder__a">Half the sections in a brief don't. Say so once and move on.</span>
+                </li>
+                <li>
+                    <span class="ladder__n">02</span>
+                    <span class="ladder__q">Is it in this repo already?</span>
+                    <span class="ladder__a">Copy the pattern from the matching demo page rather than starting a new
+                        one.</span>
+                </li>
+                <li>
+                    <span class="ladder__n">03</span>
+                    <span class="ladder__q">Does the platform do it?</span>
+                    <span class="ladder__a">&lt;dialog&gt;, popover, &lt;details&gt;, input type=date,
+                        scroll-driven animations, view transitions.</span>
+                </li>
+                <li>
+                    <span class="ladder__n">04</span>
+                    <span class="ladder__q">Is there a known-good library?</span>
+                    <span class="ladder__a">Toasts, drawers, command menus and date pickers are solved. See the
+                        library list.</span>
+                </li>
+                <li>
+                    <span class="ladder__n">05</span>
+                    <span class="ladder__q">Only then, write it</span>
+                    <span class="ladder__a">And only the minimum that works.</span>
+                </li>
+            </ol>
+        </section>
+
+        <section class="section wrap">
+            <div class="section__head">
+                <h2>Start a new project</h2>
+                <p>Copy the tokens, pick a style class, build.</p>
+            </div>
+            <pre><code># 1. copy the tokens into the new project
+cp dk-design-system/src/tokens.css new-project/src/
+
+# 2. in your HTML, put the style on &lt;body&gt;
+&lt;body class="<b>t-confident</b>"&gt;
+
+# 3. ask Claude Code, with the skill installed
+<b>Use the dk-style skill. This is an accountancy firm.</b></code></pre>
+        </section>
+
+        <section class="section wrap">
+            <div class="section__head">
+                <h2>Reference</h2>
+            </div>
+            <div class="docs">
+                <a class="doc" href="site-audit.md">
+                    <h3>Site audit <code>docs/site-audit.md</code></h3>
+                    <p>Every DK Digital project mapped onto the styles, what two of them should be restyled to,
+                        and why SKIIP forced a fourth style. November 2026.</p>
+                </a>
+                <a class="doc" href="seo.md">
+                    <h3>SEO checklist <code>docs/seo.md</code></h3>
+                    <p>Ship blockers, Core Web Vitals targets, structured data, local search, and the launch
+                        checklist to run on the day. <code>styles/confident.html</code> is the working example.</p>
+                </a>
+                <a class="doc" href="ui-libraries.md">
+                    <h3>Library research list <code>docs/ui-libraries.md</code></h3>
+                    <p>Vanilla and React tracks, motion libraries, inspiration galleries, and what has been renamed
+                        or sunset since you last looked. Verified November 2026.</p>
+                </a>
+                <a class="doc" href="house-style.md">
+                    <h3>Full house style spec <code>docs/house-style.md</code></h3>
+                    <p>All three token sets with the numbers, what each style is for, and the explicit don'ts for
+                        each one.</p>
+                </a>
+                <div class="doc">
+                    <h3>The dk-style skill <code>.claude/skills/dk-style/</code></h3>
+                    <p>In the repo, not on this site. Tells Claude Code which style to use, which libraries to reach
+                        for, and to stop hand-building solved components.</p>
+                </div>
+                <div class="doc">
+                    <h3>Repo readme <code>README.md</code></h3>
+                    <p>In the repo. How to run this locally, install the skill, deploy, and start a new client
+                        project from these tokens.</p>
+                </div>
+            </div>
+        </section>
+
+        <section class="section wrap">
+            <div class="section__head">
+                <h2>Non-negotiable in all four styles</h2>
+                <p>Not style choices. These don't get traded away for a deadline.</p>
+            </div>
+            <ul class="checks">
+                <li>Visible <code>:focus-visible</code> ring on everything interactive</li>
+                <li>Body text at 4.5:1 contrast, large text at 3:1</li>
+                <li><code>prefers-reduced-motion</code> honoured</li>
+                <li>Fully operable by keyboard</li>
+                <li>Real text, never copy baked into an image</li>
+                <li>One h1, headings in order, landmarks present</li>
+                <li>Width and height on images to stop layout shift</li>
+                <li>Fluid with <code>clamp()</code>, built at 360px first</li>
+                <li>44&times;44px tap targets on touch, 8px apart</li>
+                <li>16px minimum body text and form inputs</li>
+                <li>Unique title, description and canonical per page</li>
+                <li>LCP under 2.5s, CLS under 0.1 on a mid-range phone</li>
+            </ul>
+        </section>
+    </main>
+
+    <footer class="foot">
+        <div class="wrap">
+            <p>DK Digital design system &middot; internal. Demo clients are fictional; the tokens are real.</p>
+        </div>
+    </footer>
+</body>
+
+</html>

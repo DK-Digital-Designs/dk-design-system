@@ -1,0 +1,250 @@
+<!doctype html>
+<html lang="en">
+
+<head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <title>Utility — DK Digital house style</title>
+    <meta name="description"
+        content="The Utility style: dense, functional, light and dark. A demo client payments portal built from DK Digital's Utility tokens." />
+    <meta name="robots" content="noindex" />
+    <meta name="theme-color" content="#0b0d10" />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+        href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600&family=JetBrains+Mono:wght@400;500&display=swap"
+        rel="stylesheet" />
+  <script type="module" crossorigin src="../assets/utility-Cd644Uer.js"></script>
+  <link rel="modulepreload" crossorigin href="../assets/modulepreload-polyfill-B5Qt9EMX.js">
+  <link rel="stylesheet" crossorigin href="../assets/utility-vse2pqcI.css">
+  <link rel="stylesheet" crossorigin href="../assets/tokens-CNJ62J6D.css">
+  <link rel="stylesheet" crossorigin href="../assets/demobar-m5X47fXa.css">
+</head>
+
+<body class="t-utility">
+    <div class="demobar">
+        <a class="demobar__back" href="../index.html">&larr; House style</a>
+        <p class="demobar__note"><strong>Utility</strong> &middot; dense, functional, light + dark &middot; fictional
+            client, real tokens</p>
+    </div>
+
+    <div class="app">
+        <aside class="side">
+            <p class="side__brand"><span class="side__mark" aria-hidden="true">N</span> Northgate</p>
+
+            <nav aria-label="Demo navigation">
+                <h4>Billing</h4>
+                <ul>
+                    <li><a href="#" aria-current="page">
+                            <svg viewBox="0 0 24 24" aria-hidden="true">
+                                <path d="M4 4h16v16H4zM8 9h8M8 13h8M8 17h5" />
+                            </svg> Invoices
+                        </a></li>
+                    <li><a href="#">
+                            <svg viewBox="0 0 24 24" aria-hidden="true">
+                                <path d="M3 7h18v11H3zM3 11h18M7 15h4" />
+                            </svg> Payments
+                        </a></li>
+                    <li><a href="#">
+                            <svg viewBox="0 0 24 24" aria-hidden="true">
+                                <path d="M12 3v18M7 7h10M5 12h14M7 17h10" />
+                            </svg> Statements
+                        </a></li>
+                </ul>
+            </nav>
+
+            <nav aria-label="Demo navigation, account">
+                <h4>Account</h4>
+                <ul>
+                    <li><a href="#">
+                            <svg viewBox="0 0 24 24" aria-hidden="true">
+                                <circle cx="12" cy="8" r="3.5" />
+                                <path d="M5 20c0-3.5 3-6 7-6s7 2.5 7 6" />
+                            </svg> Contacts
+                        </a></li>
+                    <li><a href="#">
+                            <svg viewBox="0 0 24 24" aria-hidden="true">
+                                <circle cx="12" cy="12" r="3" />
+                                <path d="M12 4v2M12 18v2M4 12h2M18 12h2M6 6l1.5 1.5M16.5 16.5L18 18M18 6l-1.5 1.5M7.5 16.5L6 18" />
+                            </svg> Settings
+                        </a></li>
+                </ul>
+            </nav>
+
+            <div class="side__foot">
+                <span class="avatar" aria-hidden="true">DG</span>
+                <p>Dean Gibson<span>Account admin</span></p>
+            </div>
+        </aside>
+
+        <div class="main">
+            <div class="topbar">
+                <label class="vh" for="q">Search invoices</label>
+                <input class="search" id="q" type="search" placeholder="Search invoices, references, contacts" />
+                <span class="topbar__spacer"></span>
+                <button class="iconbtn" type="button" id="theme" aria-pressed="false"
+                    aria-label="Switch to light theme">
+                    <svg viewBox="0 0 24 24" aria-hidden="true">
+                        <circle cx="12" cy="12" r="4" />
+                        <path d="M12 2v2M12 20v2M2 12h2M20 12h2M5 5l1.5 1.5M17.5 17.5L19 19M19 5l-1.5 1.5M6.5 17.5L5 19" />
+                    </svg>
+                </button>
+                <button class="iconbtn" type="button" aria-label="Notifications">
+                    <svg viewBox="0 0 24 24" aria-hidden="true">
+                        <path d="M6 9a6 6 0 1112 0c0 4 1.5 5.5 1.5 5.5h-15S6 13 6 9zM10 18.5a2 2 0 004 0" />
+                    </svg>
+                </button>
+            </div>
+
+            <main class="page">
+                <div class="page__head">
+                    <h1>Invoices</h1>
+                    <button class="btn btn--quiet" type="button">Export CSV</button>
+                    <button class="btn btn--primary" type="button">New invoice</button>
+                    <p>Showing all invoices raised in the last 90 days. Overdue items are chased automatically on day
+                        7 and day 21.</p>
+                </div>
+
+                <div class="tiles">
+                    <div class="tile">
+                        <p class="tile__l">Outstanding</p>
+                        <p class="tile__n">R 184 920</p>
+                        <p class="tile__d">Across 9 invoices</p>
+                    </div>
+                    <div class="tile">
+                        <p class="tile__l">Overdue</p>
+                        <p class="tile__n">R 42 300</p>
+                        <p class="tile__d">3 invoices, oldest 34 days</p>
+                    </div>
+                    <div class="tile">
+                        <p class="tile__l">Paid this month</p>
+                        <p class="tile__n">R 310 475</p>
+                        <p class="tile__d"><span class="delta delta--up">+12.4%</span> on last month</p>
+                    </div>
+                    <div class="tile">
+                        <p class="tile__l">Average days to pay</p>
+                        <p class="tile__n">18.2</p>
+                        <p class="tile__d"><span class="delta delta--down">+2.1</span> on last month</p>
+                    </div>
+                </div>
+
+                <div class="split">
+                    <section class="card">
+                        <div class="card__head">
+                            <h2>All invoices</h2>
+                            <button class="btn btn--quiet" type="button">Status</button>
+                            <button class="btn btn--quiet" type="button">Date range</button>
+                        </div>
+                        <div class="tablescroll">
+                            <table>
+                                <caption class="vh">Invoices, newest first</caption>
+                                <thead>
+                                    <tr>
+                                        <th scope="col">Reference</th>
+                                        <th scope="col">Client</th>
+                                        <th scope="col">Issued</th>
+                                        <th scope="col">Due</th>
+                                        <th scope="col">Status</th>
+                                        <th scope="col" class="num">Amount</th>
+                                    </tr>
+                                </thead>
+                                <tbody>
+                                    <tr>
+                                        <td class="ref">INV-2041</td>
+                                        <td class="who">Beaumont Logistics</td>
+                                        <td>18 Nov 2026</td>
+                                        <td>18 Dec 2026</td>
+                                        <td><span class="badge badge--idle">Sent</span></td>
+                                        <td class="num">R 86 400.00</td>
+                                    </tr>
+                                    <tr>
+                                        <td class="ref">INV-2040</td>
+                                        <td class="who">Kestrel Property</td>
+                                        <td>14 Nov 2026</td>
+                                        <td>14 Dec 2026</td>
+                                        <td><span class="badge badge--warn">Part paid</span></td>
+                                        <td class="num">R 31 250.00</td>
+                                    </tr>
+                                    <tr>
+                                        <td class="ref">INV-2039</td>
+                                        <td class="who">Lindhurst Group</td>
+                                        <td>02 Nov 2026</td>
+                                        <td>02 Dec 2026</td>
+                                        <td><span class="badge badge--ok">Paid</span></td>
+                                        <td class="num">R 124 000.00</td>
+                                    </tr>
+                                    <tr>
+                                        <td class="ref">INV-2038</td>
+                                        <td class="who">Avery &amp; Sons</td>
+                                        <td>24 Oct 2026</td>
+                                        <td>24 Nov 2026</td>
+                                        <td><span class="badge badge--err">Overdue</span></td>
+                                        <td class="num">R 18 900.00</td>
+                                    </tr>
+                                    <tr>
+                                        <td class="ref">INV-2037</td>
+                                        <td class="who">Meridian Clinics</td>
+                                        <td>19 Oct 2026</td>
+                                        <td>19 Nov 2026</td>
+                                        <td><span class="badge badge--err">Overdue</span></td>
+                                        <td class="num">R 9 150.00</td>
+                                    </tr>
+                                    <tr>
+                                        <td class="ref">INV-2036</td>
+                                        <td class="who">Beaumont Logistics</td>
+                                        <td>11 Oct 2026</td>
+                                        <td>11 Nov 2026</td>
+                                        <td><span class="badge badge--ok">Paid</span></td>
+                                        <td class="num">R 86 400.00</td>
+                                    </tr>
+                                    <tr>
+                                        <td class="ref">INV-2035</td>
+                                        <td class="who">Kestrel Property</td>
+                                        <td>03 Oct 2026</td>
+                                        <td>02 Nov 2026</td>
+                                        <td><span class="badge badge--err">Overdue</span></td>
+                                        <td class="num">R 14 250.00</td>
+                                    </tr>
+                                </tbody>
+                            </table>
+                        </div>
+                        <div class="cardfoot">
+                            <p>7 of 24 invoices</p>
+                            <span class="cardfoot__spacer"></span>
+                            <button class="btn btn--quiet" type="button">Previous</button>
+                            <button class="btn btn--quiet" type="button">Next</button>
+                        </div>
+                    </section>
+
+                    <section class="card">
+                        <div class="card__head">
+                            <h2>Recent activity</h2>
+                        </div>
+                        <ul class="feed">
+                            <li>Payment received &mdash; INV-2039 <time>Today, 09:14</time></li>
+                            <li>Reminder sent &mdash; INV-2038 <time>Yesterday, 06:00</time></li>
+                            <li>Invoice raised &mdash; INV-2041 <time>18 Nov, 11:42</time></li>
+                            <li>Contact updated &mdash; Kestrel Property <time>16 Nov, 15:08</time></li>
+                            <li>Part payment &mdash; INV-2040 <time>15 Nov, 10:21</time></li>
+                        </ul>
+                    </section>
+                </div>
+
+                <section class="card">
+                    <div class="card__head">
+                        <h2>Recurring invoices</h2>
+                    </div>
+                    <div class="empty">
+                        <h3>No recurring invoices yet</h3>
+                        <p>Set one up to bill a client the same amount on a schedule. You can pause or edit it at any
+                            time.</p>
+                        <button class="btn btn--primary" type="button">Create a recurring invoice</button>
+                    </div>
+                </section>
+            </main>
+        </div>
+    </div>
+
+</body>
+
+</html>

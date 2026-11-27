@@ -1,0 +1,212 @@
+<!doctype html>
+<html lang="en">
+
+<head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover" />
+    <title>Commerce — DK Digital house style</title>
+    <meta name="description"
+        content="The Commerce style: light, product-forward, built for one thumb. A demo venue ordering flow built from DK Digital's Commerce tokens." />
+    <meta name="robots" content="noindex" />
+    <meta name="theme-color" content="#ffffff" />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link href="https://fonts.googleapis.com/css2?family=Inter+Tight:wght@600&family=Inter:wght@400;500;600&display=swap"
+        rel="stylesheet" />
+  <script type="module" crossorigin src="../assets/commerce-DTP_B8Rm.js"></script>
+  <link rel="modulepreload" crossorigin href="../assets/modulepreload-polyfill-B5Qt9EMX.js">
+  <link rel="stylesheet" crossorigin href="../assets/commerce-CxJ7CEIi.css">
+  <link rel="stylesheet" crossorigin href="../assets/tokens-CNJ62J6D.css">
+  <link rel="stylesheet" crossorigin href="../assets/demobar-m5X47fXa.css">
+</head>
+
+<body class="t-commerce">
+    <div class="demobar">
+        <a class="demobar__back" href="../index.html">&larr; House style</a>
+        <p class="demobar__note"><strong>Commerce</strong> &middot; light, product-forward, one thumb &middot; try it
+            at phone width &mdash; the cart bar is the point</p>
+    </div>
+
+    <header class="top">
+        <div class="wrap top__in">
+            <a class="top__back" href="../index.html" aria-label="Back to vendors">
+                <svg viewBox="0 0 24 24" aria-hidden="true">
+                    <path d="M15 5l-7 7 7 7" />
+                </svg>
+            </a>
+            <div class="top__title">
+                <h1>The Smoke Pit</h1>
+                <p>Food court &middot; 4 min walk</p>
+            </div>
+            <p class="open">Open</p>
+        </div>
+    </header>
+
+    <main class="wrap">
+        <div class="chips" role="group" aria-label="Menu categories">
+            <button class="chip" type="button" aria-pressed="true">Popular</button>
+            <button class="chip" type="button" aria-pressed="false">Burgers</button>
+            <button class="chip" type="button" aria-pressed="false">Sides</button>
+            <button class="chip" type="button" aria-pressed="false">Drinks</button>
+            <button class="chip" type="button" aria-pressed="false">Sweet</button>
+        </div>
+
+        <div class="shop">
+            <div>
+                <section class="group">
+                    <h2>Popular</h2>
+                    <ul class="items">
+                        <li class="item" data-id="smash" data-price="9500">
+                            <div class="item__body">
+                                <h3>Double Smash Burger</h3>
+                                <p>Two patties, burnt cheese, pickles, house sauce.</p>
+                                <p class="item__price">R 95.00</p>
+                            </div>
+                            <div class="item__right">
+                                <div class="item__media" aria-hidden="true">🍔</div>
+                                <div class="qty qty--empty">
+                                    <button type="button" data-dec aria-label="Remove one Double Smash Burger">&minus;</button>
+                                    <output aria-live="polite" aria-label="Double Smash Burger quantity">0</output>
+                                    <button type="button" data-inc aria-label="Add one Double Smash Burger">+</button>
+                                </div>
+                            </div>
+                        </li>
+
+                        <li class="item" data-id="wings" data-price="7500">
+                            <div class="item__body">
+                                <h3>Buffalo Wings</h3>
+                                <p>Six wings, blue cheese dip, celery.</p>
+                                <p class="item__price">R 75.00 <span class="item__was">R 89.00</span></p>
+                                <p class="tag">Festival special</p>
+                            </div>
+                            <div class="item__right">
+                                <div class="item__media" aria-hidden="true">🍗</div>
+                                <div class="qty qty--empty">
+                                    <button type="button" data-dec aria-label="Remove one Buffalo Wings">&minus;</button>
+                                    <output aria-live="polite" aria-label="Buffalo Wings quantity">0</output>
+                                    <button type="button" data-inc aria-label="Add one Buffalo Wings">+</button>
+                                </div>
+                            </div>
+                        </li>
+
+                        <li class="item" data-id="halloumi" data-price="8200">
+                            <div class="item__body">
+                                <h3>Halloumi Stack</h3>
+                                <p>Grilled halloumi, roast pepper, harissa mayo. Vegetarian.</p>
+                                <p class="item__price">R 82.00</p>
+                            </div>
+                            <div class="item__right">
+                                <div class="item__media" aria-hidden="true">🧀</div>
+                                <div class="qty qty--empty">
+                                    <button type="button" data-dec aria-label="Remove one Halloumi Stack">&minus;</button>
+                                    <output aria-live="polite" aria-label="Halloumi Stack quantity">0</output>
+                                    <button type="button" data-inc aria-label="Add one Halloumi Stack">+</button>
+                                </div>
+                            </div>
+                        </li>
+                    </ul>
+                </section>
+
+                <section class="group">
+                    <h2>Sides &amp; drinks</h2>
+                    <ul class="items">
+                        <li class="item" data-id="fries" data-price="4500">
+                            <div class="item__body">
+                                <h3>Loaded Fries</h3>
+                                <p>Cheese sauce, crispy onion, spring onion.</p>
+                                <p class="item__price">R 45.00</p>
+                            </div>
+                            <div class="item__right">
+                                <div class="item__media" aria-hidden="true">🍟</div>
+                                <div class="qty qty--empty">
+                                    <button type="button" data-dec aria-label="Remove one Loaded Fries">&minus;</button>
+                                    <output aria-live="polite" aria-label="Loaded Fries quantity">0</output>
+                                    <button type="button" data-inc aria-label="Add one Loaded Fries">+</button>
+                                </div>
+                            </div>
+                        </li>
+
+                        <li class="item" data-id="lemonade" data-price="3500">
+                            <div class="item__body">
+                                <h3>Cloudy Lemonade</h3>
+                                <p>500ml, served over ice.</p>
+                                <p class="item__price">R 35.00</p>
+                            </div>
+                            <div class="item__right">
+                                <div class="item__media" aria-hidden="true">🥤</div>
+                                <div class="qty qty--empty">
+                                    <button type="button" data-dec aria-label="Remove one Cloudy Lemonade">&minus;</button>
+                                    <output aria-live="polite" aria-label="Cloudy Lemonade quantity">0</output>
+                                    <button type="button" data-inc aria-label="Add one Cloudy Lemonade">+</button>
+                                </div>
+                            </div>
+                        </li>
+
+                        <li class="item item--out" data-id="brisket" data-price="11000">
+                            <div class="item__body">
+                                <h3>Brisket Roll</h3>
+                                <p>Twelve-hour brisket, slaw, pickled chilli.</p>
+                                <p class="item__price">R 110.00</p>
+                            </div>
+                            <div class="item__right">
+                                <div class="item__media" aria-hidden="true">🥩</div>
+                                <p class="soldout">Sold out</p>
+                            </div>
+                        </li>
+                    </ul>
+                </section>
+
+                <section class="status">
+                    <h2>Order #4417</h2>
+                    <p>Collect from The Smoke Pit when it says ready. We'll buzz your phone.</p>
+                    <ol class="steps">
+                        <li class="is-done">Order paid <time>19:42</time></li>
+                        <li class="is-done">Accepted by vendor <time>19:43</time></li>
+                        <li class="is-now">Being prepared <time>about 6 minutes left</time></li>
+                        <li class="is-todo">Ready to collect</li>
+                    </ol>
+                </section>
+            </div>
+
+            <aside class="summary" aria-label="Your order">
+                <p class="summary__head">Your order</p>
+                <p class="summary__empty" data-summary-empty>Nothing added yet. Tap + on anything above.</p>
+                <ul data-summary-list></ul>
+                <div class="summary__totals" data-summary-totals hidden>
+                    <div><span>Subtotal</span><span data-subtotal>R 0.00</span></div>
+                    <div><span>Service fee</span><span>R 6.00</span></div>
+                    <div class="summary__total"><span>Total</span><span data-total>R 0.00</span></div>
+                </div>
+                <div class="summary__foot">
+                    <button class="btn btn--primary" type="button" data-checkout disabled>Pay now</button>
+                    <div class="trust">
+                        <span>
+                            <svg viewBox="0 0 24 24" aria-hidden="true">
+                                <path d="M5 11h14v9H5zM8 11V7a4 4 0 018 0v4" />
+                            </svg> Secure checkout
+                        </span>
+                        <span>
+                            <svg viewBox="0 0 24 24" aria-hidden="true">
+                                <path d="M20 7L9.5 17.5 4 12" />
+                            </svg> Refunded if cancelled
+                        </span>
+                    </div>
+                </div>
+            </aside>
+        </div>
+    </main>
+
+    <!-- Thumb reach. Slides up the moment the basket isn't empty, never covers the last item. -->
+    <div class="cartbar">
+        <div class="cartbar__in">
+            <p class="cartbar__meta">
+                <span class="cartbar__total" data-bar-total>R 0.00</span>
+                <span data-bar-meta>0 items</span>
+            </p>
+            <button class="btn btn--primary" type="button">View order</button>
+        </div>
+    </div>
+
+</body>
+
+</html>
