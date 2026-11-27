@@ -1,0 +1,38 @@
+/* The strip across the top of each demo page. Deliberately styleless and token-free
+   so it reads as scaffolding on all three styles rather than part of the design. */
+
+.demobar {
+    display: flex;
+    flex-wrap: wrap;
+    align-items: center;
+    gap: 0.5rem 1.25rem;
+    padding: 0.625rem clamp(1rem, 4vw, 2.5rem);
+    background: #1c1c1f;
+    color: #c8c8cd;
+    font-family: "Inter", system-ui, sans-serif;
+    font-size: 0.8125rem;
+    line-height: 1.4;
+}
+
+.demobar__back {
+    font-weight: 600;
+    color: #fff;
+    white-space: nowrap;
+}
+
+.demobar__back:hover {
+    text-decoration: underline;
+}
+
+.demobar__note {
+    margin-left: auto;
+}
+
+.demobar__note strong {
+    color: #fff;
+}
+
+.demobar :focus-visible {
+    outline: 2px solid #fff;
+    outline-offset: 2px;
+}

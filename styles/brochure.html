@@ -1,0 +1,138 @@
+<!doctype html>
+<html lang="en">
+
+<head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <title>Brochure — DK Digital house style</title>
+    <meta name="description"
+        content="The Brochure style: expressive, dark, motion-led. A demo page for a fictional client, built from DK Digital's Brochure tokens." />
+    <meta name="robots" content="noindex" />
+    <meta name="theme-color" content="#09090b" />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+        href="https://fonts.googleapis.com/css2?family=Bricolage+Grotesque:opsz,wght@12..96,500;12..96,600;12..96,700;12..96,800&family=Inter:wght@400;500;600&display=swap"
+        rel="stylesheet" />
+    <link rel="stylesheet" href="../src/tokens.css" />
+    <link rel="stylesheet" href="../src/brochure.css" />
+    <link rel="stylesheet" href="../src/demobar.css" />
+</head>
+
+<body class="t-brochure">
+    <div class="demobar">
+        <a class="demobar__back" href="../index.html">&larr; House style</a>
+        <p class="demobar__note"><strong>Brochure</strong> &middot; expressive, dark, motion-led &middot; fictional
+            client, real tokens</p>
+    </div>
+
+    <header class="nav">
+        <div class="wrap nav__in">
+            <a class="nav__logo" href="#">VOLT</a>
+            <nav class="nav__links" aria-label="Demo navigation">
+                <a href="#classes">Classes</a>
+                <a href="#how">How it works</a>
+                <a href="#numbers">Results</a>
+            </nav>
+            <a class="btn btn--primary" href="#join">Book a ride</a>
+        </div>
+    </header>
+
+    <main>
+        <section class="hero">
+            <div class="wrap hero__in">
+                <p class="eyebrow">Now open in Sea Point</p>
+                <h1>Forty-five minutes that <span class="grad">ruin</span> your excuses.</h1>
+                <p>A dark room, a loud playlist and a bike that knows exactly how hard you're pretending to work.
+                    Clip in.</p>
+                <div class="hero__cta">
+                    <a class="btn btn--primary" href="#join">Claim your first ride</a>
+                    <a class="btn btn--ghost" href="#how">See how it works</a>
+                </div>
+            </div>
+        </section>
+
+        <div class="marquee" aria-hidden="true">
+            <div class="marquee__track">
+                <span>Sprint</span><span>&bull;</span><span>Climb</span><span>&bull;</span><span>Endure</span><span>&bull;</span><span>Recover</span><span>&bull;</span>
+                <span>Sprint</span><span>&bull;</span><span>Climb</span><span>&bull;</span><span>Endure</span><span>&bull;</span><span>Recover</span><span>&bull;</span>
+            </div>
+        </div>
+
+        <section class="section wrap" id="how">
+            <div class="section__head" data-reveal>
+                <h2>Three steps, no small print.</h2>
+            </div>
+            <p class="section__lede" data-reveal>No joining fee, no twelve-month lock-in, no conversation with a
+                salesperson in a branded gilet.</p>
+
+            <div class="rows">
+                <article class="row" data-reveal>
+                    <p class="row__num">01</p>
+                    <h3>Pick a slot</h3>
+                    <p>Fifty rides a week, from 05:30 to 20:00. Book up to a fortnight ahead, cancel free up to four
+                        hours before.</p>
+                </article>
+                <article class="row" data-reveal>
+                    <p class="row__num">02</p>
+                    <h3>We set you up</h3>
+                    <p>Shoes, towel and a bike fitted to you on your first visit. Turn up with a water bottle and
+                        nothing else.</p>
+                </article>
+                <article class="row" data-reveal>
+                    <p class="row__num">03</p>
+                    <h3>Ride, then see the numbers</h3>
+                    <p>Output, cadence and heart rate on screen through the class, and in your inbox twenty minutes
+                        after it.</p>
+                </article>
+            </div>
+        </section>
+
+        <section class="wrap" id="numbers">
+            <div class="stats">
+                <div>
+                    <p class="stat__n" data-count="1240" data-suffix="+">0</p>
+                    <p class="stat__l">Riders on the books</p>
+                </div>
+                <div>
+                    <p class="stat__n" data-count="50">0</p>
+                    <p class="stat__l">Classes every week</p>
+                </div>
+                <div>
+                    <p class="stat__n" data-count="98" data-suffix="%">0</p>
+                    <p class="stat__l">Would book again</p>
+                </div>
+                <div>
+                    <p class="stat__n" data-count="45" data-suffix=" min">0</p>
+                    <p class="stat__l">Door to door, showered</p>
+                </div>
+            </div>
+        </section>
+
+        <section class="quote wrap">
+            <figure data-reveal>
+                <blockquote>I came for the playlist and stayed for the leaderboard.</blockquote>
+                <figcaption>Thandi M. &middot; riding since March</figcaption>
+            </figure>
+        </section>
+
+        <section class="wrap" id="join">
+            <div class="band" data-reveal>
+                <div class="band__in">
+                    <h2>First ride is on us.</h2>
+                    <p>Book any class this week, turn up, and if you hate it you owe us nothing.</p>
+                    <a class="btn btn--primary" href="#">Book a free ride</a>
+                </div>
+            </div>
+        </section>
+    </main>
+
+    <footer class="wrap foot">
+        <p class="foot__logo">VOLT</p>
+        <p>Fictional client. Built to demonstrate the Brochure style.</p>
+    </footer>
+
+    <script type="module" src="../src/reveal.js"></script>
+</body>
+
+</html>
