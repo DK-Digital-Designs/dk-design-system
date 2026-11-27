@@ -92,6 +92,84 @@ Neutral, dense, functional. Built to be read at a glance and used all day. Suppo
 
 ---
 
+## Mobile first — and mean it
+
+**Roughly 99% of our clients' visitors arrive on a phone.** Desktop is where we enjoy working;
+it is not where the site gets used. Google also indexes the mobile version, so a site that is
+poor on a phone is poor everywhere that matters.
+
+This is a working order, not a slogan:
+
+1. **Design and build at 360px first.** Not "check it afterwards" — start there. If a layout only
+   works once you have 1200px, the layout is wrong.
+2. **Then let it grow.** `clamp()` and `minmax()` from the small layout outwards. Reach for a
+   media query when the content actually needs a different shape, not at a fixed device width.
+3. **Desktop last**, as the widest case of the same design. Cap the measure so a 27" screen
+   doesn't produce 160-character lines.
+
+The rules:
+
+- **Tap targets 44×44px minimum**, with at least 8px between them. Thumbs are imprecise and
+  nobody zooms to tap a link. Where a desktop-dense UI genuinely needs smaller controls — the
+  Utility style's 32px icon buttons — bump them under `@media (pointer: coarse)`. All three
+  styles do this; copy the pattern.
+- **Primary actions in reach of a thumb.** Bottom third of the screen is easy, top corners are
+  not. A "Call us" button that needs a second hand doesn't get pressed.
+- **Never hover-only.** Anything revealed on hover must also be reachable by tap and by keyboard.
+  Tooltips carrying real information are a desktop habit; drop them.
+- **Form inputs at 16px minimum.** Anything smaller makes iOS Safari zoom the page on focus, and
+  the visitor is now lost somewhere in your layout.
+- **Use the right `inputmode` and `autocomplete`.** `type="tel"`, `inputmode="numeric"`,
+  `autocomplete="email"`. It costs one attribute and saves the visitor a fight with the keyboard.
+- **Phone numbers and addresses are links.** `tel:` and a maps link. On a phone these are the
+  two things people actually want.
+- **No horizontal scroll, ever.** Check `document.documentElement.scrollWidth` against
+  `clientWidth` at 360px before you call anything done.
+- **Test on a real mid-range Android**, not just the browser's device emulator. Emulators do not
+  reproduce slow CPUs, patchy data, or how heavy a page feels in the hand.
+
+---
+
+## Readability and ease of use
+
+Clean and intuitive beats clever. A visitor should never have to work out how the page works.
+
+### Readability
+
+- **Body text 16px minimum**, 18px on content-heavy pages. Never shrink body copy to fit more in.
+- **Measure capped at 60–75 characters.** `max-width: 65ch`. The single highest-leverage
+  typography rule there is.
+- **Line height 1.5–1.65** for body copy, tighter only for large headings.
+- **Left-aligned.** Centred text is fine for one or two lines and painful for a paragraph.
+- **Real paragraphs**, 2–4 sentences. A wall of text gets skipped on a phone.
+- **Contrast checked against the actual background**, not against white. Muted grey on a tinted
+  surface is the usual failure.
+- **Plain language.** Write what a customer would say out loud. Delete "leverage", "solutions",
+  "bespoke" and "seamless" on sight.
+- **Front-load every heading and link.** People scan the first two words.
+
+### Ease of use
+
+- **One obvious primary action per screen.** If everything is a button, nothing is.
+- **Say what happens next.** "Send enquiry — we reply within one working day" beats "Submit".
+- **Fewer choices.** Five services presented clearly convert better than twelve. Cutting the
+  nav is usually the biggest usability win available.
+- **Make the important thing findable without scrolling** — on a phone, what the business does
+  and how to contact them.
+- **Consistent navigation** in the same place on every page, with the current page marked.
+- **Links look like links.** No styling a link as body text and hoping.
+- **Forms: as few fields as the job needs.** Label every field above it, never placeholder-only.
+  Errors appear next to the field, in words, saying how to fix it.
+- **Never trap the visitor.** No scroll-jacking, no pop-up before they have read anything, no
+  carousel that moves on its own.
+- **Loading and empty states are designed**, not left blank. An empty state says what goes there
+  and how to add it.
+
+The test: hand the phone to someone who has never seen the site and say nothing. If they ask
+"what do I press?", the page has failed.
+
+---
+
 ## Non-negotiables, all three styles
 
 These aren't style choices and they don't get traded away for a deadline.
@@ -102,8 +180,13 @@ These aren't style choices and they don't get traded away for a deadline.
 - **Keyboard** — every interactive thing reachable and operable without a mouse. If it needs a drawer or a command menu, use Vaul or cmdk rather than building it (see `ui-libraries.md`).
 - **Real text over images** — never bake copy into a graphic.
 - **One `<h1>` per page**, headings in order, landmarks (`<header>`, `<nav>`, `<main>`, `<footer>`) present.
-- **Images** — explicit `width`/`height` to stop layout shift, `loading="lazy"` below the fold, meaningful `alt` or `alt=""` if decorative.
-- **Fluid, not breakpoint-driven** — `clamp()` for type and spacing. Test at 360px before anything else.
+- **Images** — explicit `width`/`height` to stop layout shift, `loading="lazy"` below the fold (never on the hero), meaningful `alt` or `alt=""` if decorative.
+- **Fluid, not breakpoint-driven** — `clamp()` for type and spacing. Build at 360px before anything else.
+- **Tap targets 44×44px** on touch, 8px apart. Smaller desktop controls get bumped under `@media (pointer: coarse)`.
+- **No horizontal scroll at 360px.** Verify it, don't assume it.
+- **Body text 16px minimum**, form inputs 16px minimum, measure capped at 60–75 characters.
+- **Unique `<title>`, meta description and canonical on every page.** See `seo.md` — this is not an optional extra on a client site.
+- **LCP under 2.5s and CLS under 0.1** on a mid-range phone. A design that can't hit that is a design that changes.
 
 ---
 

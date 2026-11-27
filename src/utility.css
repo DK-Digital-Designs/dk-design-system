@@ -249,6 +249,30 @@
     background: var(--surface-2);
 }
 
+/* Phones first. 32px controls are defensible on a mouse-driven dense dashboard and
+   nowhere else, so touch devices get the full 44px. */
+@media (pointer: coarse) {
+
+    .btn,
+    .iconbtn,
+    .search,
+    .side a {
+        min-height: 44px;
+    }
+
+    .iconbtn {
+        min-width: 44px;
+    }
+
+    .side a {
+        height: auto;
+    }
+
+    td {
+        height: 48px;
+    }
+}
+
 /* ---------- stat tiles ---------- */
 
 .tiles {

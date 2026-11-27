@@ -59,12 +59,34 @@
     }
 }
 
+/* Phones first. Thumbs are imprecise, so every target is at least 44px on touch.
+   The pseudo-element grows the hit area without moving anything on screen. */
+@media (pointer: coarse) {
+
+    .nav__links a,
+    .foot ul a,
+    .link {
+        position: relative;
+    }
+
+    .nav__links a::after,
+    .foot ul a::after,
+    .link::after {
+        content: "";
+        position: absolute;
+        inset: 50% -8px auto;
+        translate: 0 -50%;
+        height: 44px;
+    }
+}
+
 /* ---------- buttons ---------- */
 
 .btn {
     display: inline-flex;
     align-items: center;
     gap: 0.5rem;
+    min-height: 44px;
     padding: 0.8125rem 1.375rem;
     border-radius: var(--radius);
     font-size: 0.9375rem;

@@ -1,9 +1,20 @@
 # DK Digital — design system
 
-Three house styles, a reuse-first library list, and a showcase site that demonstrates both.
+The playbook for every new DK Digital website: three house styles, the mobile-first and SEO
+rules that apply to all of them, a reuse-first library list, and a showcase site that
+demonstrates the lot.
 
-Every new DK Digital project starts here instead of from an empty stylesheet. The point is to
-stop designing from scratch and stop hand-building components that are already solved.
+Every new project starts here instead of from an empty stylesheet. The point is to stop
+designing from scratch and stop hand-building components that are already solved.
+
+**Three rules that come before the style:**
+
+1. **Phones first.** ~99% of our clients' visitors are on a phone. Build at 360px and grow
+   outwards. 44px tap targets, 16px inputs, no horizontal scroll.
+2. **SEO as you build**, not as a phase at the end. Local search is the whole game for a small
+   business. Unique title/description/canonical per page, structured data, Core Web Vitals.
+3. **Readable and obvious.** 65ch measure, 16px body text, one primary action per screen,
+   plain language.
 
 ```powershell
 npm install; npm run dev
@@ -15,12 +26,13 @@ npm install; npm run dev
 |---|---|
 | `index.html` | The hub. The three styles, the reuse ladder, the non-negotiables. |
 | `styles/brochure.html` | **Brochure** demo — expressive, dark, motion-led. Fictional cycling studio. |
-| `styles/confident.html` | **Confident** demo — light, restrained, typographic. Fictional accountancy firm. |
+| `styles/confident.html` | **Confident** demo — light, restrained, typographic. Fictional accountancy firm. Also the **SEO reference**: view source for the meta tags and JSON-LD. |
 | `styles/utility.html` | **Utility** demo — dense, functional, light + dark. Fictional payments portal. |
 | `src/tokens.css` | **The source of truth.** Reset plus all three token sets as `.t-*` classes. |
 | `src/brochure.css`, `src/confident.css`, `src/utility.css` | Each style's components. |
 | `src/reveal.js` | Scroll reveal and count-up on `IntersectionObserver`. No animation library. |
-| `docs/house-style.md` | Full spec: every token, what each style is for, the explicit don'ts. |
+| `docs/house-style.md` | Full spec: every token, mobile-first rules, readability rules, the explicit don'ts. |
+| `docs/seo.md` | SEO checklist: ship blockers, Core Web Vitals, structured data, local search, launch day. |
 | `docs/ui-libraries.md` | Library research list and inspiration galleries. Verified Nov 2026. |
 | `.claude/skills/dk-style/` | Claude Code skill that applies all of the above automatically. |
 

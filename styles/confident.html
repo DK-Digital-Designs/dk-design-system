@@ -9,6 +9,20 @@
         content="The Confident style: light, restrained, typographic. A demo page for a fictional advisory firm, built from DK Digital's Confident tokens." />
     <meta name="robots" content="noindex" />
     <meta name="theme-color" content="#fbfaf8" />
+
+    <!-- This page doubles as the SEO reference. Everything from here to the closing
+         </script> is the pattern to copy onto a real client site. See docs/seo.md. -->
+    <link rel="canonical" href="https://harrowreed.example/" />
+    <meta property="og:type" content="website" />
+    <meta property="og:url" content="https://harrowreed.example/" />
+    <meta property="og:title" content="Chartered accountants in Cape Town | Harrow Reed" />
+    <meta property="og:description"
+        content="Accounts, tax and payroll for owner-managed businesses turning over R2m to R60m. One partner on your account, one fixed fee agreed up front." />
+    <meta property="og:image" content="https://harrowreed.example/og.jpg" />
+    <meta property="og:image:width" content="1200" />
+    <meta property="og:image:height" content="630" />
+    <meta name="twitter:card" content="summary_large_image" />
+
     <link rel="preconnect" href="https://fonts.googleapis.com" />
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
     <link
@@ -17,13 +31,76 @@
     <link rel="stylesheet" href="../src/tokens.css" />
     <link rel="stylesheet" href="../src/confident.css" />
     <link rel="stylesheet" href="../src/demobar.css" />
+
+    <script type="application/ld+json">
+    {
+      "@context": "https://schema.org",
+      "@type": "AccountingService",
+      "name": "Harrow Reed",
+      "url": "https://harrowreed.example/",
+      "telephone": "+27215550142",
+      "email": "hello@harrowreed.example",
+      "address": {
+        "@type": "PostalAddress",
+        "streetAddress": "12 Bree Street",
+        "addressLocality": "Cape Town",
+        "addressRegion": "Western Cape",
+        "postalCode": "8001",
+        "addressCountry": "ZA"
+      },
+      "areaServed": ["Cape Town", "Western Cape"],
+      "openingHours": "Mo-Fr 08:00-17:00",
+      "priceRange": "$$$"
+    }
+    </script>
+
+    <script type="application/ld+json">
+    {
+      "@context": "https://schema.org",
+      "@type": "FAQPage",
+      "mainEntity": [
+        {
+          "@type": "Question",
+          "name": "What does it cost?",
+          "acceptedAnswer": {
+            "@type": "Answer",
+            "text": "Annual accounts and tax for a company turning over under R10m typically run R28,000 to R45,000 a year. We quote exactly after a first meeting, and the quote does not move unless the scope does."
+          }
+        },
+        {
+          "@type": "Question",
+          "name": "How do we move from our current accountant?",
+          "acceptedAnswer": {
+            "@type": "Answer",
+            "text": "We write to them for professional clearance and your records. You sign one letter. It usually takes two to three weeks and there is no gap in your filings."
+          }
+        },
+        {
+          "@type": "Question",
+          "name": "Do you work with businesses smaller than R2m?",
+          "acceptedAnswer": {
+            "@type": "Answer",
+            "text": "Honestly, we are not the best value below that. We will point you to two firms who are set up for it."
+          }
+        },
+        {
+          "@type": "Question",
+          "name": "Which accounting software do you work with?",
+          "acceptedAnswer": {
+            "@type": "Answer",
+            "text": "Xero and Sage, both fine. If you are on spreadsheets we will migrate you as part of the first year and quote that separately."
+          }
+        }
+      ]
+    }
+    </script>
 </head>
 
 <body class="t-confident">
     <div class="demobar">
         <a class="demobar__back" href="../index.html">&larr; House style</a>
-        <p class="demobar__note"><strong>Confident</strong> &middot; light, restrained, typographic &middot; fictional
-            client, real tokens</p>
+        <p class="demobar__note"><strong>Confident</strong> &middot; light, restrained, typographic &middot; also the
+            SEO reference &mdash; view source for the meta tags and JSON-LD</p>
     </div>
 
     <header class="nav">
@@ -170,8 +247,8 @@
             <p class="section__lede">Thirty minutes, no charge, no pitch deck. You tell us what is going on and we
                 tell you whether we are the right firm for it.</p>
             <div class="hero__cta">
-                <a class="btn btn--primary" href="#">Arrange a call</a>
-                <a class="link" href="#">hello@harrowreed.example</a>
+                <a class="btn btn--primary" href="#">Arrange a call &mdash; we reply within one working day</a>
+                <a class="link" href="mailto:hello@harrowreed.example">hello@harrowreed.example</a>
             </div>
         </section>
     </main>
@@ -181,9 +258,12 @@
             <div class="foot__grid">
                 <div>
                     <h4>Harrow Reed</h4>
+                    <!-- On a phone these are the two things people want. Always links,
+                         and the text must match the Google Business Profile exactly. -->
                     <ul>
-                        <li>12 Bree Street</li>
-                        <li>Cape Town 8001</li>
+                        <li><a href="https://maps.google.com/?q=12+Bree+Street+Cape+Town+8001">12 Bree Street,
+                                Cape Town 8001</a></li>
+                        <li><a href="tel:+27215550142">021 555 0142</a></li>
                     </ul>
                 </div>
                 <div>
